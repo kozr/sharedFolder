@@ -1,5 +1,8 @@
 #!/bin/bash
-
+git add -A
+git commit -m "commit"
+git push
+git status > git-status.txt
 while true
 do
 git pull
