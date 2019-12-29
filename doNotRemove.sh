@@ -1,4 +1,11 @@
 #!/bin/bash
+echo "Type your github username"
+read usernameGit
+echo "Type your github email"
+read emailGit
+git config --local credential.helper store
+git config --local user.name $usernameGit
+git config --local user.email  $emailGit
 git add -A
 git commit -m "commit"
 git push
