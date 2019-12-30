@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 echo "Type your github username"
 read usernameGit
 echo "Type your github email"
@@ -29,3 +29,10 @@ while true; do
     sleep 10
 done
 fi
+
+
+
+
+
+
+
