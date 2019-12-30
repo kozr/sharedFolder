@@ -14,6 +14,7 @@ git add -A
 git commit -m "commit"
 git push
 numberLines=`wc -l < contributor.txt`
+echo $numberLines
 while [ "$numberLines" -eq "$contributorNumber" ]; do
     git pull
     numberLines=`wc -l < contributor.txt`
