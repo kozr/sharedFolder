@@ -13,7 +13,7 @@ echo $usernameGit >> contributor.txt
 git add -A
 git commit -m "commit"
 git push
-while wc -l contributor.txt != $contributorNumber
+while wc -l [contributor.txt != $contributorNumber]
 do
 git pull
 sleep 10
