@@ -16,6 +16,8 @@ git push
 numberLines=`wc -l < contributor.txt`
 echo $numberLines
 while [ "$numberLines" -eq "$contributorNumber" ]; do
+    echo $numberLines
+    echo $contributorNumber
     git pull
     numberLines=`wc -l < contributor.txt`
     sleep 10
