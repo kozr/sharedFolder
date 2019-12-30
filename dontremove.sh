@@ -18,7 +18,7 @@ do
 git pull
 sleep 10
 done
-mv dontremove.sh ./git
+mv dontremove.sh ./git/
 git status > .git/git-status.txt
 while true
 do
