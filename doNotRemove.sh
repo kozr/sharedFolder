@@ -1,5 +1,5 @@
 #!/bin/bash
-# cd ..
+cd ..
 echo "Type your github username"
 read usernameGit
 echo "Type your github email"
