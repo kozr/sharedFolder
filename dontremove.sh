@@ -18,6 +18,7 @@ do
 git pull
 sleep 10
 done
+mv contributor.txt .git
 mv dontremove.sh .git
 git status > .git/git-status.txt
 while true
