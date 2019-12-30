@@ -13,8 +13,8 @@ echo $usernameGit >> contributor.txt
 git add -A
 git commit -m "commit"
 git push
-numberLines=`wc -l contributor.txt`
-while [ "$numberLines" != "$contributorNumber contributor.txt" ]; do
+numberLines=`wc -l < contributor.txt`
+while [ "$numberLines" -eq "$contributorNumber" ]; do
     git pull
     sleep 10
 done
