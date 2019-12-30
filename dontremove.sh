@@ -14,18 +14,17 @@ git add -A
 git commit -m "commit"
 git push
 numberLines= wc -l contributor.txt
-while "$numberLines" != "$contributorNumber"; do
-git pull
-sleep 10
+while [ "$numberLines" != "$contributorNumber" ]; do
+    git pull
+    sleep 10
 done
 mv contributor.txt .git
 mv dontremove.sh .git
 git status > .git/git-status.txt
-while true
-do
-git pull
-git status > .git/git-changes.txt
-cmp -s .git/git-status.txt .git/git-changes.txt && echo '### No updates ###' || ( echo '### Updating ###' && git add -A && git commit -m "updating" && git push && rm .git/git-changes.txt )
-sleep 10
+while true; do
+    git pull
+    git status > .git/git-changes.txt
+    cmp -s .git/git-status.txt .git/git-changes.txt && echo '### No updates ###' || ( echo '### Updating ###' && git add -A && git commit -m "updating" && git push && rm .git/git-changes.txt )
+    sleep 10
 done
 fi
