@@ -14,8 +14,7 @@ git add -A
 git commit -m "commit"
 git push
 numberLines= wc -l contributor.txt
-while [ "$numberLines" != "$contributorNumber" ]
-do
+while "$numberLines" != "$contributorNumber"; do
 git pull
 sleep 10
 done
