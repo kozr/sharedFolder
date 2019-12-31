@@ -18,7 +18,7 @@ numberLines=`wc -l < contributor.txt`
     echo $numberLines
     echo "num of contributors: "
     echo $contributorNumber
-while [ "$numberLines" -eq "$contributorNumber" ]; do
+while [ "$numberLines" -ne "$contributorNumber" ]; do
     git pull
     numberLines=`wc -l < contributor.txt`
     sleep 10
