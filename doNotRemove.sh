@@ -24,7 +24,7 @@ while [ "$numberLines" -ne "$contributorNumber" ]; do
     sleep 10
 done
 rm contributor.txt
-mv dontremove.sh .git
+mv doNotRemove.sh .git
 git status > .git/git-status.txt
 while true; do
     git pull
